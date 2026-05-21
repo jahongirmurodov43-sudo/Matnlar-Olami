@@ -1,0 +1,322 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "1-sinf",
+      "quarters": [
+        {
+          "id": "1-q1",
+          "name": "I-chorak",
+          "stories": [
+            {
+              "id": "1-q1-s1-vatan-motabar",
+              "title": "Vatan-mo'tabar",
+              "text": "Vatan — inson tug'ilib o'sgan joy. Ota-bobolar yashagan diyor. Vatan — bu siz sevgan odamlar makoni. Siz yashayotgan xonadon, mahalla, qishloq, shahar ham Vatan ichidagi kichik Vatandir.\n\nVatan ona tuproqdan boshlanadi. Uning har bir qarich yeri muqaddasdir. Inson uchun suv, havo, ota-ona qanchalik aziz bo'lsa, Vatan ham shunchalik mo'tabar.\n\nDunyoda mamlakatlar, shaharlar ko'p. Lekin inson uchun uning Vatani ona kabi yagonadir.",
+              "questions": [
+                "Dunyoda chiroyli shaharlar va davlatlar juda ko'p ekan. Nima uchun inson ularning hammasini emas, ayniqsa o'zi tug'ilib o'sgan joyini \"Vatan\" deb ataydi?",
+                "Matnda Vatan onaga o'xshatilgan. Sizningcha, Vatan bilan onaning qanday o'xshashliklari bor?",
+                "\"Vatanning har bir qarich yeri muqaddas\" deyilgan. Biz bu muqaddaslikni kundalik hayotimizda qanday asrashimiz mumkin?",
+                "Nima uchun inson boshqa davlatga mehmonga borsa ham, baribir o'z uyini va mahallasini sog'inaveradi?",
+                "Agar inson o'z uyini, mahallasini yaxshi ko'rmasa, uni \"Vatanni sevadi\" deb ayta olamizmi? Nima uchun?"
+              ]
+            },
+            {
+              "id": "1-q1-s2-kumush-qish",
+              "title": "Kumush qish",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "1-q1-s3-rahimdil-qizcha",
+              "title": "Rahimdil qizcha",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "1-q1-s4-izza-bir-qoshiq-jizza",
+              "title": "Izza — bir qoshiq jizza",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "1-q1-s5-sovga",
+              "title": "Sovg'a",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "1-q1-s6-kutubxona-nurxona",
+              "title": "Kutubxona — nurxona",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "1-q1-s7-bahor-tarifi",
+              "title": "Bahor ta'rifi",
+              "text": "",
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": "1-q2",
+          "name": "II-chorak",
+          "stories": []
+        },
+        {
+          "id": "1-q3",
+          "name": "III-chorak",
+          "stories": []
+        },
+        {
+          "id": "1-q4",
+          "name": "IV-chorak",
+          "stories": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "2-sinf",
+      "quarters": [
+        {
+          "id": "2-q1",
+          "name": "I-chorak",
+          "stories": [
+            {
+              "id": "2-q1-s1-vatan",
+              "title": "Vatan",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s2-ozod-va-obod-vatan",
+              "title": "Ozod va obod Vatan",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s3-toshkentdagi-yangi-bog",
+              "title": "Toshkentdagi yangi bog'",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s4-yer-yuzining-bezagi",
+              "title": "Yer yuzining bezagi",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s5-kitobim-oftobim",
+              "title": "Kitobim — oftobim",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s6-ilmsizlik-zulmati",
+              "title": "Ilmsizlik zulmati",
+              "text": "Qadim zamonda o'qish va yozishni yomon ko'radigan bir bola bo'lgan ekan. U turli bahonalar bilan maktabga bormas, borganda ham berilgan vazifalarni bajarmay, faqat yomon baho olar ekan. Ota-onasining tanbehlariga quloq solmay: \"Men katta bo'lsam, cho'pon bo'laman, qo'y boqish uchun o'qish kerak emas\", — der ekan.\n\nU bir kuni uylari yaqinidagi qir-adirdan qo'ziqorin terib kelish uchun tepalikka chiqibdi. Qo'ziqorinlarni terib yurib, uylaridan ancha uzoqlashib ketibdi. Yurib-yurib uncha chuqur bo'lmagan bir daryo sohiliga yetibdi. Narigi sohildan ham qo'ziqorin termoqchi bo'lib ko'prik qidiribdi. Yaqin atrofdagi ko'prik oldiga borib qarasa, uning chetidagi taxtachaga nimadir yozib qo'yilgan ekan. Bola yozuvni o'qiy olmabdi va to'g'ri narigi sohilga qarab yuribdi. Ko'prikning o'rtasiga kelganda u sinib, bola suvga tushib ketibdi. U ovozining boricha yordamga chaqiribdi. Shu orada qo'ylarini o'tlatib yurgan bir cho'pon kaltagini uzatib, bolani suvdan chiqarib olibdi va: \"Nega bu ko'prikdan o'tding?! Ko'prik ustidagi 'Bu ko'prikdan yurmang, nariroqda yangi ko'prik bor', degan yozuvni ko'rmadingmi?\" — deb so'rabdi. Bola unga javoban: \"Ko'rdim, lekin o'qiy olmadim, chunki men o'qishni bilmayman\", — debdi. Shunda cho'pon unga: \"E bolam, hatto qo'y boqish uchun ham o'qish kerak\", — debdi.",
+              "questions": [
+                "Bolakay nima uchun daryoga tushib ketdi? Bunga ko'prikning yomonligi aybdormi yoki bolaning o'qishni bilmasligimi?",
+                "Agar bola o'qishni juda yaxshi bilganida, u daryo bo'yiga kelganida nima qilgan bo'lar edi? Uning kuni qanday davom etardi?",
+                "Bolakay: \"Cho'pon bo'lish uchun o'qish shart emas\", deb o'ylagan edi. Sizningcha, cho'ponga o'qish-yozish yana nima uchun kerak bo'lishi mumkin?",
+                "Siz ko'chada yoki maktabda biror yozuvni o'qiy olmasangiz, qanday xavfli yoki noqulay vaziyatga tushib qolishingiz mumkin? Biror misol ayta olasizmi?",
+                "Agar siz o'sha suvdan chiqib kelgan bolaning do'sti bo'lsangiz, unga keyingi safar maktabga borishi uchun qanday maslahat bergan bo'lardingiz?"
+              ]
+            },
+            {
+              "id": "2-q1-s7-buyuk-ixtirochilar",
+              "title": "Buyuk ixtirochilar",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "2-q1-s8-tovush",
+              "title": "Tovush",
+              "text": "",
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": "2-q2",
+          "name": "II-chorak",
+          "stories": []
+        },
+        {
+          "id": "2-q3",
+          "name": "III-chorak",
+          "stories": []
+        },
+        {
+          "id": "2-q4",
+          "name": "IV-chorak",
+          "stories": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "3-sinf",
+      "quarters": [
+        {
+          "id": "3-q1",
+          "name": "I-chorak",
+          "stories": [
+            {
+              "id": "3-q1-s1-vatan-madhi-dillarda",
+              "title": "Vatan madhi dillarda",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "3-q1-s2-opa-singillar",
+              "title": "Opa-singillar",
+              "text": "Madina va Maftuna ismli qizaloqlar bor bo'lib, ular juda qiziquvchan opa-singil edilar. Har kuni qizlar ota-onalariga juda ko'p savollar berishar, ular esa qizlarining savollariga javob berishga ulgurishmas edi.\n\nShunday bo'lsa-da, savollarning keti uzilmasdi:\n\n— Nima sababdan?\n— Nimaga?\n\nShunday qilib, bir kuni qizlar hovliga, undan ko'chaga chiqib o'ynashdi. Madina cho'ntagidan konfet olib, qog'ozini ochdi-da, tezda og'ziga soldi va konfetning qog'ozini yerga tashladi. Konfetining bittasini Maftunaga berdi. Qizlar xush kayfiyatda o'yinni davom ettirmoqchi bo'lishdi, biroq ularni kuzatib turgan qariya attang qilgancha boshini chayqadi va ulardan so'radi:\n\n— Sizlar kimning qizisiz? Ko'chani iflos qilyapsiz-ku, bu ishingiz to'g'rimi?\n\n— Men malika bo'laman! — dedi Madina.\n\n— Men ham malika bo'laman! — kulib tasdiqladi Maftuna.\n\n— Har bir qiz malika bo'lishni orzu qiladi, — deb javob berdi qariya. — Ammo malika o'z yurtini, xalqining mehnatini qadrlaydi. O'sib-ulg'aygan joyini xor qilmaydi. Har bir insonni, uning kasbini hurmat qilish lozim.\n\n— Kasb? — ajablanib so'radi Madina. — U nima? U mazalimi? Kattami? Nima uchun u shunday nomlangan?\n\n— Siz kasb nima ekanligini bilmaysizmi? — qariya ajablanib so'radi. — Ammo siz allaqachon buni bilishingiz kerak. Bu dunyoda hamma o'z ishini astoydil bajarishi orqali bir-birlariga foyda keltiradi. Shifokor kasallarni davolaydi, o'qituvchi o'quvchilarga ta'lim beradi, haydovchi haydovchilik qiladi. Sartarosh odamlarni chiroyli soch turmagi bilan xursand qiladi. Obodonlashtirish xodimlari esa yo'llarni, ko'chalarni supurib tozalashadi. Bularning barchasi kasblar sanaladi, — dedi va o'z yo'lida davom etdi.\n\nQizlar esa qariyaning gapini tushunmay, o'ylanib qolishdi.",
+              "questions": [
+                "\"Malika\" bo'lish nima degani? Madina va Maftuna o'zlarini \"malika\" deb hisoblashadi. Sizningcha, haqiqiy malika faqat chiroyli kiyinib yurishi kerakmi yoki qariya aytganidek, atrof-muhitni toza tutishi ham muhimmi? Nima uchun?",
+                "Madina konfet qog'ozini yerga tashlaganida, kimning mehnatini hurmat qilmagan bo'ladi? Agar ko'chadagi hamma odam bittadan konfet qog'ozini yerga tashlasa, ko'cha qanday ko'rinishga kelib qoladi?",
+                "Qariya nima uchun qizlardan \"Sizlar kimning qizisiz?\" deb so'radi? Yomon ish qilgan bolaning odobi haqida odamlar nima deb o'ylashadi?",
+                "Kasb va mas'uliyat. Qizlar kasb nimaligini bilishmas edi. Tasavvur qiling, agar obodonlashtirish xodimlari bir kun ishga chiqmasalar, shahrimizda nima sodir bo'ladi? Boshqa kasblarni ham (masalan, novvoy yoki shifokor) shunday tasavvur qilib ko'ring.",
+                "Matn oxirida qizlar \"o'ylanib qolishdi\" deyilgan. Sizningcha, ular nima haqida o'ylashayotgan edi? Keyingi safar Madina konfet yesa, qog'ozini nima qiladi deb o'ylaysiz?"
+              ]
+            },
+            {
+              "id": "3-q1-s3-chorining-qobiliyati",
+              "title": "Chorining qobiliyati",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "3-q1-s4-odob",
+              "title": "Odob",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "3-q1-s5-yaxshilik",
+              "title": "Yaxshilik",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "3-q1-s6-filipok",
+              "title": "Filipok",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "3-q1-s7-dum-dumaloq-qongiz",
+              "title": "Dum-dumaloq qo'ng'iz",
+              "text": "",
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": "3-q2",
+          "name": "II-chorak",
+          "stories": []
+        },
+        {
+          "id": "3-q3",
+          "name": "III-chorak",
+          "stories": []
+        },
+        {
+          "id": "3-q4",
+          "name": "IV-chorak",
+          "stories": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "4-sinf",
+      "quarters": [
+        {
+          "id": "4-q1",
+          "name": "I-chorak",
+          "stories": [
+            {
+              "id": "4-q1-s1-yagonadir-vataning-sening",
+              "title": "Yagonadir Vataning sening",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s2-sayroqi-qushcha",
+              "title": "Sayroqi qushcha",
+              "text": "Bugun Xosiyatxonning dadasi qafasda sayroqi qush olib keldi. Xosiyatxon singlisi Hidoyatbonu bilan qushchani ko'rib, quvonib ketishdi. So'ng qafas yoniga kelib, uni tomosha qila boshladi. Qushcha chiroyli edi. Uning mayin patlari sariq, jajji qanotlarining uchlari esa oppoq edi. Qushchaning harakatlarini kuzatib turgan Hidoyatbonu:\n\n— Opa, qushcha nega qo'rqyapti? — deb so'radi.\n\n— Sen ham bir o'zing begona odamlar uyiga kirsang qo'rqasan-ku! Shunga qushcha ham qo'rqyapti.\n\n— Voy, unda biz begonamizmi? — hayratlanib so'radi Hidoyatbonu.\n\n— Ha, u bizni hech qachon ko'rmagan, shu sababli bizni tanimaydi, — dedi so'zlarini dona-dona qilib Xosiyatxon.\n\nOpa-singil qushchani yana biroz tomosha qilishdi. Qushcha sakrashda davom etardi.\n\n— Opajon, keling, unga eng chiroyli o'yinchog'imizni beramiz.\n\n— Qushcha o'yinchoq o'ynamaydi.\n\n— Nima bo'pti, u bilan o'ynaymiz. Keyin qushchaga begona bo'lmaymiz, — dedi sevinib Hidoyatbonu.\n\n— Yo'q… Kel, yaxshisi qafasga daraxt shoxlaridan o'rnatamiz. Qushcha daraxtzorda uchib yurgandek maza qilib yashaydi, — javob berdi Xosiyatxon singlisiga qarab.\n\n— Voy, qanday yaxshi! — Hidoyatbonu chapak chalib yubordi.\n\nOpa-singil birpasda shox-shabba yig'ib kelishdi. Nilufar opa qizlariga yordam berdi. Ular ayri shoxlardan uchtasini qafas ichiga tikka qilib qo'yishdi. Endi qafasning ichi shinamgina daraxtzorga aylandi. Xosiyatxon qushchaning idishiga suv quydi. Hidoyatbonu esa ikkinchi idishchani tariq bilan to'ldirdi. Ammo qushcha hali ham shoxdan shoxga pitirlab sakrardi.\n\n— Oyijon, bu qushcha chumchuqmi? — so'radi Xosiyatxon.\n\n— Yo'q, bolajonim, bu — kanareyka. U juda yoqimli sayraydi.\n\n— Unga daraxtzor yoqdimi ekan?\n\n— Menimcha, sizlar mehr bilan yasagan kichkina daraxtzor qushchaga juda yoqqan bo'lsa kerak, — dedi onasi.\n\n— U hali ham qo'rqyapti-ku… — dedi Hidoyatbonu.\n\n— Qushcha yangi joyga o'rgansa, sizlarga bir sayrab beradiki, qoyil qolasiz.\n\nErtasiga kutilmaganda qushcha jarangdor ovozda sayrab yubordi.\n\n— O'o', qushcha juda sayroqi ekan-ku! Ovozi uyni to'ldirib yubordi-ya, — hayratlandi dadasi.\n\n— Qushlarning sayrashida hikmat bor. Ular tinchlik-omonlik, mehr-oqibat, qut-baraka bor joyda shukrona aytib sayraydi, — dedi buvisi jilmayib.",
+              "questions": [
+                "Nega qushcha boshida qo'rqdi deb o'ylaysiz? Siz uning o'rnida bo'lsangiz, qanday his qilardingiz?",
+                "Xosiyatxon va Hidoyatbonu qushchaga yordam berish uchun qanday ishlar qilishdi? Siz bo'lsangiz yana nima qo'shgan bo'lardingiz?",
+                "Nima uchun qushcha darrov sayramadi, faqat ertasi kuni sayray boshladi?",
+                "Matnda \"mehr\" degan tushuncha qanday ko'rsatilgan? Qaysi joylarda buni sezish mumkin?",
+                "Buvisi \"qushlar tinchlik va mehr bor joyda sayraydi\" dedi. Siz bu fikrga qo'shilasizmi? Nega?"
+              ]
+            },
+            {
+              "id": "4-q1-s3-marvarid",
+              "title": "Marvarid",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s4-toshbagir",
+              "title": "Toshbag'ir",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s5-qarga-va-paxta",
+              "title": "Qarg'a va paxta",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s6-qanot-qoqqan-orzular",
+              "title": "Qanot qoqqan orzular",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s7-yetti-xazinaning-biri",
+              "title": "Yetti xazinaning biri",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s8-hunarli-mingni-yengar",
+              "title": "Hunarli mingni yengar",
+              "text": "",
+              "questions": []
+            },
+            {
+              "id": "4-q1-s9-kitob-va-boylik",
+              "title": "Kitob va boylik",
+              "text": "",
+              "questions": []
+            }
+          ]
+        },
+        {
+          "id": "4-q2",
+          "name": "II-chorak",
+          "stories": []
+        },
+        {
+          "id": "4-q3",
+          "name": "III-chorak",
+          "stories": []
+        },
+        {
+          "id": "4-q4",
+          "name": "IV-chorak",
+          "stories": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Admin panel - serve the static admin/index.html directly
+# (must come BEFORE the SPA catch-all below)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/:splat"
+  status = 200
+
+# React Router catch-all - everything else goes to the SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

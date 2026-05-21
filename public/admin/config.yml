@@ -1,0 +1,71 @@
+# Decap CMS configuration
+# This file controls how the admin panel at /admin works
+
+backend:
+  name: github
+  repo: jahongirmurodov43-sudo/Project_for_mansur  # ⚠️ CHANGE THIS if your repo is different
+  branch: main
+  base_url: https://api.netlify.com  # OAuth proxy provided by Netlify (free)
+
+# Where uploaded images go (we don't use images right now, but this is required)
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Locale for the admin interface
+locale: "en"
+
+# Show a publish workflow (drafts/review). Set to "simple" for instant publish.
+publish_mode: simple
+
+collections:
+  - name: "stories"
+    label: "Matnlar"
+    label_singular: "Matn"
+    folder: "content/stories"
+    create: true
+    delete: true
+    slug: "{{classId}}-{{quarterId}}-{{slug}}"
+    summary: "{{title}} ({{classId}}-sinf, {{quarterId}})"
+    sortable_fields: ['classId', 'order', 'title']
+    view_groups:
+      - label: "Sinf bo'yicha"
+        field: classId
+      - label: "Chorak bo'yicha"
+        field: quarterId
+    fields:
+      - { label: "Matn nomi", name: "title", widget: "string" }
+      - label: "Sinf"
+        name: "classId"
+        widget: "select"
+        options:
+          - { label: "1-sinf", value: 1 }
+          - { label: "2-sinf", value: 2 }
+          - { label: "3-sinf", value: 3 }
+          - { label: "4-sinf", value: 4 }
+      - label: "Chorak"
+        name: "quarterId"
+        widget: "select"
+        options:
+          - { label: "1-sinf / I-chorak", value: "1-q1" }
+          - { label: "1-sinf / II-chorak", value: "1-q2" }
+          - { label: "1-sinf / III-chorak", value: "1-q3" }
+          - { label: "1-sinf / IV-chorak", value: "1-q4" }
+          - { label: "2-sinf / I-chorak", value: "2-q1" }
+          - { label: "2-sinf / II-chorak", value: "2-q2" }
+          - { label: "2-sinf / III-chorak", value: "2-q3" }
+          - { label: "2-sinf / IV-chorak", value: "2-q4" }
+          - { label: "3-sinf / I-chorak", value: "3-q1" }
+          - { label: "3-sinf / II-chorak", value: "3-q2" }
+          - { label: "3-sinf / III-chorak", value: "3-q3" }
+          - { label: "3-sinf / IV-chorak", value: "3-q4" }
+          - { label: "4-sinf / I-chorak", value: "4-q1" }
+          - { label: "4-sinf / II-chorak", value: "4-q2" }
+          - { label: "4-sinf / III-chorak", value: "4-q3" }
+          - { label: "4-sinf / IV-chorak", value: "4-q4" }
+      - { label: "Tartib raqami (chorak ichida)", name: "order", widget: "number", default: 1, value_type: "int", min: 1 }
+      - label: "Namunaviy savollar"
+        name: "questions"
+        widget: "list"
+        required: false
+        field: { label: "Savol", name: "question", widget: "text" }
+      - { label: "Matn matni", name: "body", widget: "markdown" }

@@ -1,0 +1,22 @@
+{
+  "name": "matnlar-olami",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "build-data": "node scripts/build-data.js",
+    "dev": "npm run build-data && vite",
+    "build": "npm run build-data && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "gray-matter": "^4.0.3",
+    "vite": "^5.4.10"
+  }
+}

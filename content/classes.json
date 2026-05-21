@@ -1,0 +1,44 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "1-sinf",
+      "quarters": [
+        { "id": "1-q1", "name": "I-chorak" },
+        { "id": "1-q2", "name": "II-chorak" },
+        { "id": "1-q3", "name": "III-chorak" },
+        { "id": "1-q4", "name": "IV-chorak" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "2-sinf",
+      "quarters": [
+        { "id": "2-q1", "name": "I-chorak" },
+        { "id": "2-q2", "name": "II-chorak" },
+        { "id": "2-q3", "name": "III-chorak" },
+        { "id": "2-q4", "name": "IV-chorak" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "3-sinf",
+      "quarters": [
+        { "id": "3-q1", "name": "I-chorak" },
+        { "id": "3-q2", "name": "II-chorak" },
+        { "id": "3-q3", "name": "III-chorak" },
+        { "id": "3-q4", "name": "IV-chorak" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "4-sinf",
+      "quarters": [
+        { "id": "4-q1", "name": "I-chorak" },
+        { "id": "4-q2", "name": "II-chorak" },
+        { "id": "4-q3", "name": "III-chorak" },
+        { "id": "4-q4", "name": "IV-chorak" }
+      ]
+    }
+  ]
+}
