@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import StoryEditorModal from '../components/StoryEditorModal';
 import ConfirmModal from '../components/ConfirmModal';
@@ -8,6 +8,8 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
   const navigate = useNavigate();
   const [editorOpen, setEditorOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const utteranceRef = useRef(null);
 
   const { cls, quarter, story } = useMemo(() => {
     const cls = data.classes.find((c) => c.id === parseInt(classId));
@@ -17,6 +19,15 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
     const story = quarter.stories.find((s) => s.id === storyId);
     return { cls, quarter, story };
   }, [data, classId, quarterId, storyId]);
+
+  // Stop speech when leaving the page or changing story
+  useEffect(() => {
+    return () => {
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, [storyId]);
 
   if (!cls || !quarter || !story) {
     return (
@@ -33,6 +44,38 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
 
   const hasText = story.text && story.text.trim().length > 0;
   const hasQuestions = story.questions && story.questions.length > 0;
+  const hasSpeech = typeof window !== 'undefined' && 'speechSynthesis' in window;
+
+  const handlePlayPause = () => {
+    if (!hasSpeech) {
+      showToast('Brauzeringiz audio o\'qishni qo\'llab-quvvatlamaydi', 'error');
+      return;
+    }
+
+    if (isPlaying) {
+      window.speechSynthesis.cancel();
+      setIsPlaying(false);
+      return;
+    }
+
+    // Combine title and text
+    const textToRead = `${story.title}. ${story.text || ''}`;
+
+    const utterance = new SpeechSynthesisUtterance(textToRead);
+    utterance.lang = 'uz-UZ'; // Try Uzbek first
+    utterance.rate = 0.9;
+    utterance.pitch = 1;
+
+    utterance.onend = () => setIsPlaying(false);
+    utterance.onerror = () => {
+      setIsPlaying(false);
+      showToast('Audio o\'qishda xato', 'error');
+    };
+
+    utteranceRef.current = utterance;
+    window.speechSynthesis.speak(utterance);
+    setIsPlaying(true);
+  };
 
   const handleSave = (storyData) => {
     onUpdateStory(cls.id, quarter.id, story.id, storyData);
@@ -90,7 +133,43 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
           <div className="story-reader__eyebrow">
             {cls.name} ◆ {quarter.name}
           </div>
-          <h1 className="story-reader__title">{story.title}</h1>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '0.75rem',
+              flexWrap: 'wrap'
+            }}
+          >
+            <h1 className="story-reader__title" style={{ margin: 0 }}>
+              {story.title}
+            </h1>
+            {hasText && (
+              <button
+                onClick={handlePlayPause}
+                title={isPlaying ? 'To\'xtatish' : 'Tinglash'}
+                aria-label={isPlaying ? 'Pause' : 'Play'}
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '50%',
+                  background: isPlaying ? 'var(--maroon)' : 'var(--forest)',
+                  color: 'var(--paper-light)',
+                  fontSize: '1.3rem',
+                  display: 'grid',
+                  placeItems: 'center',
+                  transition: 'all 0.15s',
+                  boxShadow: 'var(--shadow-sm)',
+                  flexShrink: 0
+                }}
+                onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
+                onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              >
+                {isPlaying ? '⏸' : '▶'}
+              </button>
+            )}
+          </div>
           <div className="story-reader__ornament"></div>
         </header>
 
