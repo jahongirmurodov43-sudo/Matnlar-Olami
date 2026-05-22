@@ -8,8 +8,9 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
   const navigate = useNavigate();
   const [editorOpen, setEditorOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const utteranceRef = useRef(null);
+  // 'idle' = nothing playing, 'playing' = speaking, 'paused' = paused mid-speech
+  const [playState, setPlayState] = useState('idle');
+  const userStoppedRef = useRef(false);
 
   const { cls, quarter, story } = useMemo(() => {
     const cls = data.classes.find((c) => c.id === parseInt(classId));
@@ -24,6 +25,7 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
   useEffect(() => {
     return () => {
       if (window.speechSynthesis) {
+        userStoppedRef.current = true;
         window.speechSynthesis.cancel();
       }
     };
@@ -48,33 +50,53 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
 
   const handlePlayPause = () => {
     if (!hasSpeech) {
-      showToast('Brauzeringiz audio o\'qishni qo\'llab-quvvatlamaydi', 'error');
+      showToast("Brauzeringiz audio o'qishni qo'llab-quvvatlamaydi", 'error');
       return;
     }
 
-    if (isPlaying) {
-      window.speechSynthesis.cancel();
-      setIsPlaying(false);
+    // Currently paused → resume
+    if (playState === 'paused') {
+      window.speechSynthesis.resume();
+      setPlayState('playing');
       return;
     }
 
-    // Combine title and text
+    // Currently playing → pause (not cancel — so we can resume later)
+    if (playState === 'playing') {
+      window.speechSynthesis.pause();
+      setPlayState('paused');
+      return;
+    }
+
+    // Idle → start fresh from beginning
     const textToRead = `${story.title}. ${story.text || ''}`;
-
     const utterance = new SpeechSynthesisUtterance(textToRead);
-    utterance.lang = 'uz-UZ'; // Try Uzbek first
+    utterance.lang = 'uz-UZ';
     utterance.rate = 0.9;
     utterance.pitch = 1;
 
-    utterance.onend = () => setIsPlaying(false);
-    utterance.onerror = () => {
-      setIsPlaying(false);
-      showToast('Audio o\'qishda xato', 'error');
+    utterance.onend = () => setPlayState('idle');
+    utterance.onerror = (event) => {
+      // Don't show error if user intentionally stopped it
+      if (userStoppedRef.current || event.error === 'interrupted' || event.error === 'canceled') {
+        userStoppedRef.current = false;
+        setPlayState('idle');
+        return;
+      }
+      setPlayState('idle');
+      showToast("Audio o'qishda xato", 'error');
     };
 
-    utteranceRef.current = utterance;
+    userStoppedRef.current = false;
     window.speechSynthesis.speak(utterance);
-    setIsPlaying(true);
+    setPlayState('playing');
+  };
+
+  // Stop button — completely stops and resets to beginning
+  const handleStop = () => {
+    userStoppedRef.current = true;
+    window.speechSynthesis.cancel();
+    setPlayState('idle');
   };
 
   const handleSave = (storyData) => {
@@ -95,6 +117,10 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
         .map((p) => p.trim())
         .filter((p) => p.length > 0)
     : [];
+
+  const isPlaying = playState === 'playing';
+  const isPaused = playState === 'paused';
+  const isActive = isPlaying || isPaused;
 
   return (
     <div className="container-narrow">
@@ -146,28 +172,59 @@ export default function StoryPage({ data, onUpdateStory, onDeleteStory, showToas
               {story.title}
             </h1>
             {hasText && (
-              <button
-                onClick={handlePlayPause}
-                title={isPlaying ? 'To\'xtatish' : 'Tinglash'}
-                aria-label={isPlaying ? 'Pause' : 'Play'}
-                style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '50%',
-                  background: isPlaying ? 'var(--maroon)' : 'var(--forest)',
-                  color: 'var(--paper-light)',
-                  fontSize: '1.3rem',
-                  display: 'grid',
-                  placeItems: 'center',
-                  transition: 'all 0.15s',
-                  boxShadow: 'var(--shadow-sm)',
-                  flexShrink: 0
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
-                onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-              >
-                {isPlaying ? '⏸' : '▶'}
-              </button>
+              <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <button
+                  onClick={handlePlayPause}
+                  title={
+                    isPlaying ? "To'xtatish" : isPaused ? 'Davom etish' : 'Tinglash'
+                  }
+                  aria-label={isPlaying ? 'Pause' : isPaused ? 'Resume' : 'Play'}
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    background: isPlaying ? 'var(--maroon)' : 'var(--forest)',
+                    color: 'var(--paper-light)',
+                    fontSize: '1.3rem',
+                    display: 'grid',
+                    placeItems: 'center',
+                    transition: 'all 0.15s',
+                    boxShadow: 'var(--shadow-sm)',
+                    flexShrink: 0,
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                  onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
+                  onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                >
+                  {isPlaying ? '⏸' : '▶'}
+                </button>
+                {isActive && (
+                  <button
+                    onClick={handleStop}
+                    title="To'liq to'xtatish"
+                    aria-label="Stop"
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      background: 'var(--paper-light)',
+                      color: 'var(--ink-soft)',
+                      fontSize: '0.85rem',
+                      display: 'grid',
+                      placeItems: 'center',
+                      transition: 'all 0.15s',
+                      border: '1px solid var(--border)',
+                      flexShrink: 0,
+                      cursor: 'pointer'
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.08)')}
+                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                  >
+                    ⏹
+                  </button>
+                )}
+              </div>
             )}
           </div>
           <div className="story-reader__ornament"></div>
